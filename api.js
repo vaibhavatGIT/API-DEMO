@@ -23,7 +23,7 @@ app.get('/posts', (req, res) => {
   const startIndex = page * limit - limit;
   const result = posts.slice(startIndex, posts.length - skiprecords);
 
-  res.send(result).status(200);
+  res.json(result).status(200);
 });
 
 app.listen(3008);
